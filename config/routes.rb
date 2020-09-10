@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+ devise_for :users, :controllers => { registrations: 'registrations' } #これで自前のコントローラdeviseのカラムを有効にしている
   resources :tweets
 
   root "tweets#index"
